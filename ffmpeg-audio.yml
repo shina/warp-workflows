@@ -1,0 +1,19 @@
+---
+name: ffmpeg audio
+command: "ffmpeg -i {{input}} -c:a {{codec}} -c:v copy -b:a {{bitrate}} {{output}}" 
+arguments:
+  - name: input
+    description: source file name
+  - name: output
+    description: converted file name
+  - name: codec
+    description: |
+      ALAC: alac (doesn't need to set bitrate)
+      AAC: libfdk_aac
+  - name: bitrate
+    description: "lossless formats doesn't need to set bitrate" 
+
+tags: ["ffmpeg", "audio", "convert"]
+description: Convert an audio file to another format
+author: Leonardo Shinagawa
+
