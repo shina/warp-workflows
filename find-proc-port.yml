@@ -1,0 +1,11 @@
+---
+name: find process port
+command: sudo netstat -tulpn | grep {{port}}
+arguments:
+  - name: port
+    description: the port used by the process
+
+tags: ["port", "pid"]
+description: find the process id that is using a desired port
+author: Leonardo Shinagawa
+
