@@ -1,0 +1,12 @@
+---
+name: git list staged files
+command: git diff --name-only --cached --diff-filter={{filter}}
+arguments:
+  - name: filter
+    description: Select only files that are Added (A), Copied (C), Deleted (D), Modified (M), Renamed (R), have their type (i.e. regular file, symlink, submodule, ...) changed (T), are Unmerged (U), are Unknown (X), or have had their pairing Broken (B)
+    default_value: ACM
+
+tags: ["git", "diff", "list", "staged"]
+description: List files that are staged to be commited. Useful for pre-commit hooks.
+author: Leonardo Shinagawa
+
